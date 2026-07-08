@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LEBEN S.A</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="hero">
+    <h1>LEBEN S.A</h1>
+    <p><strong>Técnico en Asistencia Administrativa</strong></p>
+    <p><strong>NIT</strong> 800.940.300-1</p>
+</header>
+
+<section class="contenido">
+    <h2>Panel Principal</h2>
+    <input type="text" id="busqueda" placeholder="Buscar sección..." onkeyup="filtrar()">
+
+    <div class="grid" id="menu">
+        <a href="diapositiva1.html"> Identidad Corporativa</a>
+        <a href="diapositiva2.html"> Logotipo</a>
+        <a href="diapositiva3.html"> Misión y visión</a>
+        <a href="diapositiva4.html"> Objetivos</a>
+        <a href="diapositiva5.html"> Valores Corporativos</a>
+        <a href="diapositiva6.html"> Organigrama</a>
+        <a href="diapositiva7.html"> Competencias</a>
+        <a href="diapositiva8.html"> Juegos Leben S.A</a>
+    </div>
+
+    <div class="estadisticas">
+        <div><h3 id="productos">35</h3><p>Productos</p></div>
+        <div><h3>5</h3><p>Proveedores</p></div>
+        <div><h3>98%</h3><p>Satisfacción</p></div>
+    </div>
+</section>
+
+<script>
+function filtrar(){
+  let filtro = document.getElementById("busqueda").value.toLowerCase();
+  let enlaces = document.querySelectorAll("#menu a");
+  enlaces.forEach(e=>{
+    e.style.display = e.textContent.toLowerCase().includes(filtro) ? "block" : "none";
+  });
+}
+</script>
+</body>
+</html>
