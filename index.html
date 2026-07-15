@@ -1,48 +1,147 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LEBEN S.A</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leben - Innovación y Bienestar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="hero">
-    <h1>LEBEN S.A</h1>
-    <p><strong>Técnico en Asistencia Administrativa</strong></p>
-    <p><strong>NIT</strong> 800.940.300-1</p>
-</header>
-
-<section class="contenido">
-    <h2>Panel Principal</h2>
-    <input type="text" id="busqueda" placeholder="Buscar sección..." onkeyup="filtrar()">
-
-    <div class="grid" id="menu">
-        <a href="diapositiva1.html"> Identidad Corporativa</a>
-        <a href="diapositiva2.html"> Logotipo</a>
-        <a href="diapositiva3.html"> Misión y visión</a>
-        <a href="diapositiva4.html"> Objetivos</a>
-        <a href="diapositiva5.html"> Valores Corporativos</a>
-        <a href="diapositiva6.html"> Organigrama</a>
-        <a href="diapositiva7.html"> Competencias</a>
-        <a href="diapositiva8.html"> Juegos Leben S.A</a>
+<aside class="sidebar-slides">
+    <div class="sidebar-header">
+        <h3>CONOCEMOS</h3>
     </div>
+    <nav class="sidebar-menu">
+        <a href="diapositiva1.html" class="sidebar-link"><span>01</span> Diapositiva 1</a>
+        <a href="diapositiva2.html" class="sidebar-link"><span>02</span> Diapositiva 2</a>
+        <a href="diapositiva3.html" class="sidebar-link"><span>03</span> Diapositiva 3</a>
+        <a href="diapositiva4.html" class="sidebar-link"><span>04</span> Diapositiva 4</a>
+        <a href="diapositiva5.html" class="sidebar-link"><span>05</span> Diapositiva 5</a>
+        <a href="diapositiva6.html" class="sidebar-link"><span>06</span> Diapositiva 6</a>
+        <a href="diapositiva7.html" class="sidebar-link"><span>07</span> Diapositiva 7</a>
+        <a href="diapositiva8.html" class="sidebar-link"><span>08</span> Diapositiva 8</a>
+    </nav>
+</aside>
+    <header class="main-header">
+        </div>
+        <nav class="slide-nav">
+            <button class="nav-btn active" onclick="showSlide(0)">Inicio</button>
+            <button class="nav-btn" onclick="showSlide(1)">Nosotros</button>
+            <button class="nav-btn" onclick="showSlide(2)">Servicios</button>
+            <button class="nav-btn" onclick="showSlide(3)">Contacto</button>
+        </nav>
+    </header>
 
-    <div class="estadisticas">
-        <div><h3 id="productos">35</h3><p>Productos</p></div>
-        <div><h3>5</h3><p>Proveedores</p></div>
-        <div><h3>98%</h3><p>Satisfacción</p></div>
-    </div>
-</section>
+    <section class="image-rotator">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="imagenes/imagen1.png" alt="Leben slide 1">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-caption">
+                    <h3>Espacios de Bienestar</h3>
+                    <p>Diseñamos entornos que inspiran tranquilidad y balance.</p>
+                </div>
+            </div>
+            
+            <div class="carousel-slide">
+                <img src="imagenes/imagen2.png" alt="Leben slide 2">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-caption">
+                    <h3>Innovación Funcional</h3>
+                    <p>Soluciones inteligentes con un diseño limpio y moderno.</p>
+                </div>
+            </div>
 
-<script>
-function filtrar(){
-  let filtro = document.getElementById("busqueda").value.toLowerCase();
-  let enlaces = document.querySelectorAll("#menu a");
-  enlaces.forEach(e=>{
-    e.style.display = e.textContent.toLowerCase().includes(filtro) ? "block" : "none";
-  });
-}
-</script>
+            <div class="carousel-slide">
+                <img src="imagenes/imagen3.png" alt="Leben slide 3">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-caption">
+                    <h3>Compromiso Sostenible</h3>
+                    <p>La armonía perfecta entre tecnología y naturaleza humana.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control prev" onclick="moveCarousel(-1)" aria-label="Anterior">&#10094;</button>
+        <button class="carousel-control next" onclick="moveCarousel(1)" aria-label="Siguiente">&#10095;</button>
+    </section>
+
+    <main class="content-slides">
+        <article class="slide-content active" id="slide-0">
+            <h2>Transformando el Futuro</h2>
+            <p>En LEBEN S.A., comercializamos ropa urbana y tenis con diseños auténticos, para personas que les gusta el deporte extremo.</p>
+            <p>Explora nuestras secciones para conocer más sobre lo que hacemos y cómo podemos ayudarte a crecer.</p>
+        </article>
+
+        <article class="slide-content" id="slide-1">
+            <h2>Nuestra Historia</h2>
+            <p>Nacimos con el propósito de fusionar la innovación técnica con un enfoque profundamente humano. Nuestro equipo multidisciplinario trabaja día a día bajo estrictos estándares de excelencia.</p>
+            <blockquote>
+                "La calidad no es un acto, es un hábito." — Filosofía Leben.
+            </blockquote>
+        </article>
+
+        <article class="slide-content" id="slide-2">
+            <h2>Lo que Ofrecemos</h2>
+            <p>Nos enfocamos en ofrecer productos de alta calidad. Operamos con responsabilidad ambiental, utilizando bolsas biodegradables y conectamos con nuestras comunidades en Cali, Medellín a través de las redes sociales, brindando siempre una experiencia de compra cercana, confiable con estilo.</p>
+            <ul>
+                <li>Mantenimiento preventivo y soporte post-venta.</li>
+            </ul>
+        </article>
+
+        <article class="slide-content" id="slide-3">
+            <h2>Ponte en Contacto</h2>
+            <p>¿Tienes alguna pregunta o quieres iniciar un proyecto con nosotros? Escríbenos y nuestro equipo te responderá en la menor brevedad posible.</p>
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('¡Mensaje enviado!');">
+                <input type="text" placeholder="Tu Nombre" required>
+                <input type="email" placeholder="Tu Correo" required>
+                <textarea placeholder="¿En qué podemos ayudarte?" rows="4" required></textarea>
+                <button type="submit" class="submit-btn">Enviar Mensaje</button>
+            </form>
+        </article>
+
+    </main>
+
+    <footer class="main-footer">
+        <img src="imagenes/gaster-green-gaster.gif" alt="Logo Leben" width="10" height="10">
+        <p>&copy; 2026 Leben. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function showSlide(slideIndex) {
+            const slides = document.querySelectorAll('.slide-content');
+            slides.forEach(slide => slide.classList.remove('active'));
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            document.getElementById(`slide-${slideIndex}`).classList.add('active');
+            buttons[slideIndex].classList.add('active');
+        }
+
+        let currentImgIndex = 0;
+        const carouselSlides = document.querySelectorAll('.carousel-slide');
+
+        function showImage(index) {
+            if (index >= carouselSlides.length) currentImgIndex = 0;
+            else if (index < 0) currentImgIndex = carouselSlides.length - 1;
+            else currentImgIndex = index;
+
+            carouselSlides.forEach((slide, i) => {
+                if (i === currentImgIndex) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+        }
+
+        function moveCarousel(direction) {
+            showImage(currentImgIndex + direction);
+        }
+        setInterval(() => {
+            moveCarousel(1);
+        }, 5000);
+    </script>
 </body>
 </html>
